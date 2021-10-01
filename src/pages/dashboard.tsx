@@ -32,7 +32,7 @@ const Dashboard: NextPage = () => {
             <Text as="h1" color="white" fontSize="2xl" fontWeight="bold">
               Olá {session?.user?.name}
             </Text>
-            <Text as="h1" color="white" fontSize="2xl" fontWeight="bold">
+            <Text as="h2" color="white" fontSize="2xl" fontWeight="bold">
               Seu e-mail é: {session?.user?.email}
             </Text>
           </Box>
