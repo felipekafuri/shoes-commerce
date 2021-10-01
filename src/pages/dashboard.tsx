@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
-import { Flex, Box, Text } from '@chakra-ui/react'
+import { Flex, Box, Text, Button } from '@chakra-ui/react'
 import Head from 'next/head'
-import { useSession } from 'next-auth/client'
-import { useEffect } from 'react'
+import { signOut, useSession } from 'next-auth/client'
+import React, { useEffect } from 'react'
 
 const Dashboard: NextPage = () => {
   const [session, loading] = useSession()
@@ -35,6 +35,9 @@ const Dashboard: NextPage = () => {
             <Text as="h2" color="white" fontSize="2xl" fontWeight="bold">
               Seu e-mail é: {session?.user?.email}
             </Text>
+            <Button colorScheme="blue" onClick={() => signOut()}>
+              SignOut
+            </Button>
           </Box>
         </Flex>
       </Flex>
