@@ -10,13 +10,10 @@ export default NextAuth({
     })
   ],
   callbacks: {
-    async session(session) {
+    async session(session, user) {
       try {
-        console.log(session)
-        return {
-          ...session,
-          activeSubscription: 'test'
-        }
+        session.id = user.id
+        return Promise.resolve(session)
       } catch (error) {
         return {
           ...session,

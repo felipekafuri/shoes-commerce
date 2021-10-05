@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   const [session] = useSession()
 
   async function handleGoogleLogin() {
-    await signIn()
+    await signIn('google')
   }
 
   useEffect(() => {
