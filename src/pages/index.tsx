@@ -9,7 +9,9 @@ const Home: NextPage = () => {
   const [session] = useSession()
 
   async function handleGoogleLogin() {
-    await signIn('google')
+    await signIn('google', {
+      callbackUrl: process.env.NEXT_PUBLIC_NEXT_AUTH_URL
+    })
   }
 
   useEffect(() => {
