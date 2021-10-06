@@ -9,6 +9,7 @@ export default NextAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET
     })
   ],
+  database: process.env.MONGODB_URI,
   callbacks: {
     async session(session, user) {
       try {
