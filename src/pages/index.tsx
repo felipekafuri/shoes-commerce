@@ -27,7 +27,7 @@ const Home: NextPage = () => {
         <Flex
           w="500px"
           h="300px"
-          bg="gray.700"
+          bg="gray.800"
           borderRadius="lg"
           align="center"
           justify="center"
